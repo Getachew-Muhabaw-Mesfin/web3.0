@@ -32,7 +32,7 @@ const Input = ({
 );
 const Welcome = () => {
   const connectWallet = () => {};
-  const handleSubmit=()=>{}
+  const handleSubmit = () => {};
   return (
     <div className="flex w-full justify-center items-center">
       <div className="flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
@@ -109,12 +109,20 @@ const Welcome = () => {
               type="text"
               handleChange={() => {}}
             />
-            <div className="h-[1px] w-full bg-gray-400 my-2 "/>
-            {true?(<Loader/>):(<div>
-              <button type="button" onClick={handleSubmit}>
-
-              </button>
-            </div>)}
+            <div className="h-[1px] w-full bg-gray-400 my-2 " />
+            {false ? (
+              <Loader />
+            ) : (
+              <div>
+                <button
+                  type="button"
+                  onClick={handleSubmit}
+                  className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
+                >
+                  Send now
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
